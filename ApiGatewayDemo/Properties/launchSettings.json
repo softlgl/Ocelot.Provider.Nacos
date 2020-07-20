@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "ApiGatewayDemo": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "http://*:5001"
+    }
+  }
+}
