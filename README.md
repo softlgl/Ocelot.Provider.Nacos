@@ -32,6 +32,7 @@ public void ConfigureServices(IServiceCollection services)
 {
   "Routes": [
     {
+      // 用于服务发现的名称，也就是注册到nacos上的名称
       "ServiceName": "productservice",
       "DownstreamScheme": "http",
       "DownstreamPathTemplate": "/productapi/{everything}",
@@ -59,6 +60,7 @@ public void ConfigureServices(IServiceCollection services)
     "DefaultTimeOut": 15000,
     "Namespace": "",
     "ListenInterval": 1000,
+    // 网关服务名称
     "ServiceName": "apigateway"
 }
 ```
