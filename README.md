@@ -27,19 +27,15 @@ public void ConfigureServices(IServiceCollection services)
 再已有的ocelot配置文件上添加
 ```json
 {
-  // 转发路由，数组中的每个元素都是某个服务的一组路由转发规则
   "Routes": [
     {
       "ServiceName": "productservice",
-      // Uri方案，http、https
       "DownstreamScheme": "http",
-      // 下游（服务提供方）服务路由模板
       "DownstreamPathTemplate": "/productapi/{everything}",
-      // 上游（客户端，服务消费方）请求路由模板
       "UpstreamPathTemplate": "/productapi/{everything}",
       "UpstreamHttpMethod": [ "Get", "Post" ],
       "LoadBalancerOptions": {
-        "Type": "RoundRobin" //轮询     
+        "Type": "RoundRobin"  
       },
       // 使用服务发现
       "UseServiceDiscovery": true
