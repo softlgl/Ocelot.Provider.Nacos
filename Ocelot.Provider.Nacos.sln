@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiGatewayDemo", "ApiGatewa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductApi", "ProductApi\ProductApi.csproj", "{412DE300-5740-4EEE-9592-A48FF549BADF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ocelot.Provider.Nacos.Test", "Ocelot.Provider.Nacos.Test\Ocelot.Provider.Nacos.Test.csproj", "{4E1CC9B8-BD07-40CB-BF0C-9F0EE1FCBC79}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,10 +33,15 @@ Global
 		{412DE300-5740-4EEE-9592-A48FF549BADF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{412DE300-5740-4EEE-9592-A48FF549BADF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{412DE300-5740-4EEE-9592-A48FF549BADF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E1CC9B8-BD07-40CB-BF0C-9F0EE1FCBC79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E1CC9B8-BD07-40CB-BF0C-9F0EE1FCBC79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E1CC9B8-BD07-40CB-BF0C-9F0EE1FCBC79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E1CC9B8-BD07-40CB-BF0C-9F0EE1FCBC79}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{284367EA-EC93-4060-ABE7-3EF93A5A888C} = {B76348CD-F496-4B6E-A915-82A342AA5150}
 		{F26F410A-1282-4756-931E-D56AC128C2FD} = {7A2BFC89-057F-4F8D-ADB7-C7D122B160EF}
 		{412DE300-5740-4EEE-9592-A48FF549BADF} = {7A2BFC89-057F-4F8D-ADB7-C7D122B160EF}
+		{4E1CC9B8-BD07-40CB-BF0C-9F0EE1FCBC79} = {D7B862B3-BB35-4D94-AE3D-C78B537B5E2F}
 	EndGlobalSection
 EndGlobal
