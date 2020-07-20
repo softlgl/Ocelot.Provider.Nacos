@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Authors>softlgl</Authors>
+    <Copyright>softlgl</Copyright>
+    <Owners>softlgl</Owners>
+    <PackageProjectUrl>https://github.com/softlgl/Ocelot.Provider.Nacos</PackageProjectUrl>
+    <Title>Ocelot.Provider.Nacos</Title>
+    <Description>Repo for Nacos integration with Ocelot</Description>
   </PropertyGroup>
 
   <ItemGroup>

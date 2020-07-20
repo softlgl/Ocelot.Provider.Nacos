@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="Ocelot" Version="16.0.1" />
+    <PackageReference Include="Ocelot.Provider.Nacos" Version="1.0.0" />
   </ItemGroup>
   <ItemGroup>
     <Content Update="ocelotconfig.json">
@@ -15,10 +16,5 @@
     <Content Condition="'$(ExcludeConfigFilesFromBuildOutput)'!='true'" Update="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\src\Ocelot.Provider.Nacos\Ocelot.Provider.Nacos.csproj">
-      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
-    </ProjectReference>
   </ItemGroup>
 </Project>
