@@ -1,2 +1,2 @@
 # Ocelot.Provider.Nacos
-Repo for Eureka integration with Nacos
+Ocelot集成Nacos注册中心
