@@ -8,6 +8,7 @@ Ocelot集成Nacos注册中心组件
   ```
   <PackageReference Include="nacos-sdk-csharp-unofficial" Version="0.2.7" />
   ```
+  它其实是有一个asp.net core版本的组件，但是我没有选用，虽然那个用起来功能很强大，但是我需要自己改造一下，让它能更好的适配Ocelot
 
 ### 添加引用
 ```
