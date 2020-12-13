@@ -45,7 +45,6 @@ namespace ProductApi
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseNacosAspNetCore();
             app.UseRouting();
 
             app.UseSwagger();

@@ -3,10 +3,10 @@
     "ApiGatewayDemo": {
       "commandName": "Project",
       "launchBrowser": true,
+      "applicationUrl": "http://*:5001",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-      "applicationUrl": "http://*:5001"
+      }
     }
   }
 }
