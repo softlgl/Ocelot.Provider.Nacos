@@ -11,6 +11,8 @@ namespace Ocelot.Provider.Nacos.NacosClient
     public class NacosServerManager : INacosServerManager
     {
         private readonly INacosNamingClient _client;
+        IOptions<NacosAspNetCoreOptions> _optionsAccs;
+
         private readonly IEasyCachingProvider _provider;
 
         public NacosServerManager(
@@ -19,6 +21,7 @@ namespace Ocelot.Provider.Nacos.NacosClient
             IOptions<NacosAspNetCoreOptions> optionsAccs)
         {
             _client = client;
+            _optionsAccs = optionsAccs;
             _provider = factory.GetCachingProvider("nacos.aspnetcore");
         }
 
@@ -29,6 +32,8 @@ namespace Ocelot.Provider.Nacos.NacosClient
                 var serviceInstances = await _client.ListInstancesAsync(new ListInstancesRequest
                 {
                     ServiceName = serviceName,
+                    GroupName = _optionsAccs.Value.GroupName,
+                    NamespaceId = _optionsAccs.Value.Namespace,
                     HealthyOnly = true,
                 });
 
