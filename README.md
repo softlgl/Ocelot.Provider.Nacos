@@ -18,7 +18,7 @@ Ocelot集成Nacos注册中心组件
 ```
 dotnet add package Ocelot.Provider.Nacos --version 1.0.0
 ```
-目前以支持.net5，请如有需要请引入最新的1.1.0版本
+<b>目前以支持.net5，请如有需要请引入最新的1.1.0版本</b>
 ```
 <PackageReference Include="Ocelot.Provider.Nacos" Version="1.1.0" />
 ```
