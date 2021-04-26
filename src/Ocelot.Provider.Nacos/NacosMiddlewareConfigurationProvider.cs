@@ -3,9 +3,9 @@ using System.Threading.Tasks;
 using Ocelot.Configuration;
 using Ocelot.Configuration.Repository;
 using Ocelot.Middleware;
-using Ocelot.Provider.Nacos.NacosClient;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Ocelot.Provider.Nacos.NacosClient.V2;
 
 namespace Ocelot.Provider.Nacos
 {
@@ -20,7 +20,7 @@ namespace Ocelot.Provider.Nacos
 
             if (UsingNacosServiceDiscoveryProvider(config.Data))
             {
-                builder.UseNacosDiscovery(hostLifetime).GetAwaiter().GetResult();
+                builder.UseNacosAspNet(hostLifetime).GetAwaiter().GetResult();
             }
 
             return Task.CompletedTask;

@@ -7,7 +7,10 @@
 
   <ItemGroup>
     <PackageReference Include="Ocelot" Version="17.0.0" />
-    <PackageReference Include="Ocelot.Provider.Nacos" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Ocelot.Provider.Nacos\Ocelot.Provider.Nacos.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Content Update="ocelotconfig.json">

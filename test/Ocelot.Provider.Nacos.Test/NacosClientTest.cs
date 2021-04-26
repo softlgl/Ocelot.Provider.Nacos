@@ -3,6 +3,7 @@ using System.IO;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Ocelot.Provider.Nacos.NacosClient;
+using Ocelot.Provider.Nacos.NacosClient.V2;
 using Xunit;
 
 namespace Ocelot.Provider.Nacos.Test
@@ -15,11 +16,11 @@ namespace Ocelot.Provider.Nacos.Test
             IServiceCollection services = new ServiceCollection();
             IConfigurationBuilder configurationBuilder = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json");
-            services.AddNacosDiscovery(configurationBuilder.Build());
+            services.AddNacosAspNet(configurationBuilder.Build());
 
             var provider = services.BuildServiceProvider();
-            StatusReportBgTask statusReportBgTask = provider.GetRequiredService<StatusReportBgTask>();
-            await statusReportBgTask.StartAsync();
+            RegSvcBgTask regSvcBgTask = provider.GetRequiredService<RegSvcBgTask>();
+            await regSvcBgTask.StartAsync();
             Console.ReadLine();
         }
     }

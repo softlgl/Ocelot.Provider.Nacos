@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Nacos.AspNetCore.V2;
 
 namespace ProductApi
 {
@@ -26,7 +27,7 @@ namespace ProductApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddNacosAspNetCore(Configuration);
+            services.AddNacosAspNet(Configuration);
 
             services.AddSwaggerGen(c =>
             {

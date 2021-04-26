@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -11,13 +11,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="nacos-sdk-csharp" Version="1.0.3" />
     <PackageReference Include="Ocelot" Version="17.0.0" />   
-    <PackageReference Include="nacos-sdk-csharp-unofficial" Version="0.8.0" />
     <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="5.0.0" />
     <PackageReference Include="EasyCaching.InMemory" Version="1.1.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.1" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="NacosClient\" />
   </ItemGroup>
 </Project>
