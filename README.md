@@ -2,8 +2,8 @@
 Ocelot集成Nacos注册中心组件
 
 ### 开发环境
-+ .Net Core 3.1 因为最新稳定版的Ocelot是在.Net Core 3.1上构建的
-+ Ocelot版本 v16.0.1
++ .Net Core 3.1 因为最新稳定版的Ocelot是在.Net Core 3.1上构建的(目前以支持.net5，由张队进行升级的)
++ Ocelot版本 v16.0.1(最新版已是17.0.0)
 + Nacos访问组件 [nacos-sdk-csharp](https://github.com/catcherwong/nacos-sdk-csharp)
   ```
   <PackageReference Include="nacos-sdk-csharp-unofficial" Version="0.2.7" />
@@ -18,6 +18,15 @@ Ocelot集成Nacos注册中心组件
 ```
 dotnet add package Ocelot.Provider.Nacos --version 1.0.0
 ```
+<b>目前以支持.net5，请如有需要请引入最新的1.1.0版本</b>
+```
+<PackageReference Include="Ocelot.Provider.Nacos" Version="1.1.0" />
+```
+或
+```
+dotnet add package Ocelot.Provider.Nacos --version 1.1.0
+```
+
 
 ### 使用方式
 在已有的Ocelot的项目上添加以下内容，具体操作可查看[demo](https://github.com/softlgl/Ocelot.Provider.Nacos/tree/master/demo/ApiGatewayDemo)
