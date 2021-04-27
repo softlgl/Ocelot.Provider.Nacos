@@ -16,9 +16,10 @@ Ocelot集成Nacos注册中心组件
 + .Net5
 + Ocelot版本 v17.0.0
 + Nacos访问组件 [nacos-sdk-csharp](https://github.com/nacos-group/nacos-sdk-csharp)
-  ```
+
+```
  <PackageReference Include="nacos-sdk-csharp" Version="1.1.0-alpha20210426120755" />
-  ```
+```
 
 ### 添加引用
 不同版本支持naocs版本不一样
