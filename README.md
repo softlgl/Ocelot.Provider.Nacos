@@ -18,7 +18,7 @@ Ocelot集成Nacos注册中心组件
 + Nacos访问组件 [nacos-sdk-csharp](https://github.com/nacos-group/nacos-sdk-csharp)
 
 ```
- <PackageReference Include="nacos-sdk-csharp" Version="1.1.0-alpha20210426120755" />
+ <PackageReference Include="nacos-sdk-csharp" Version="1.1.0" />
 ```
 
 ### 添加引用
@@ -45,11 +45,11 @@ dotnet add package Ocelot.Provider.Nacos --version 1.1.0
 
 管理界面安装的话注意勾选 包括预览发行版，因为目前构建的是预览版
 ```
-<PackageReference Include="Ocelot.Provider.Nacos" Version="1.2.0-preview.1" />
+<PackageReference Include="Ocelot.Provider.Nacos" Version="1.2.0" />
 ```
 或
 ```
-dotnet add package Ocelot.Provider.Nacos --version 1.2.0-preview.1
+dotnet add package Ocelot.Provider.Nacos --version 1.2.0
 ```
 
 ### 使用方式
