@@ -1,19 +1,22 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31321.278
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B76348CD-F496-4B6E-A915-82A342AA5150}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ocelot.Provider.Nacos", "src\Ocelot.Provider.Nacos\Ocelot.Provider.Nacos.csproj", "{284367EA-EC93-4060-ABE7-3EF93A5A888C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ocelot.Provider.Nacos", "src\Ocelot.Provider.Nacos\Ocelot.Provider.Nacos.csproj", "{284367EA-EC93-4060-ABE7-3EF93A5A888C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{D7B862B3-BB35-4D94-AE3D-C78B537B5E2F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "demo", "demo", "{7A2BFC89-057F-4F8D-ADB7-C7D122B160EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ocelot.Provider.Nacos.Test", "test\Ocelot.Provider.Nacos.Test\Ocelot.Provider.Nacos.Test.csproj", "{4E1CC9B8-BD07-40CB-BF0C-9F0EE1FCBC79}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ocelot.Provider.Nacos.Test", "test\Ocelot.Provider.Nacos.Test\Ocelot.Provider.Nacos.Test.csproj", "{4E1CC9B8-BD07-40CB-BF0C-9F0EE1FCBC79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiGatewayDemo", "demo\ApiGatewayDemo\ApiGatewayDemo.csproj", "{179D0A0F-AAC3-4322-92DE-008F91554389}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiGatewayDemo", "demo\ApiGatewayDemo\ApiGatewayDemo.csproj", "{179D0A0F-AAC3-4322-92DE-008F91554389}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductApi", "demo\ProductApi\ProductApi.csproj", "{F1AA9A81-CBB6-4D8E-9FC4-45C7355AF8CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductApi", "demo\ProductApi\ProductApi.csproj", "{F1AA9A81-CBB6-4D8E-9FC4-45C7355AF8CA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nacos", "..\nacos-sdk-csharp\src\Nacos\Nacos.csproj", "{44D98D52-236A-4534-B59F-255EF3C40F7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,11 +40,22 @@ Global
 		{F1AA9A81-CBB6-4D8E-9FC4-45C7355AF8CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1AA9A81-CBB6-4D8E-9FC4-45C7355AF8CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1AA9A81-CBB6-4D8E-9FC4-45C7355AF8CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44D98D52-236A-4534-B59F-255EF3C40F7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44D98D52-236A-4534-B59F-255EF3C40F7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44D98D52-236A-4534-B59F-255EF3C40F7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44D98D52-236A-4534-B59F-255EF3C40F7C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{284367EA-EC93-4060-ABE7-3EF93A5A888C} = {B76348CD-F496-4B6E-A915-82A342AA5150}
 		{4E1CC9B8-BD07-40CB-BF0C-9F0EE1FCBC79} = {D7B862B3-BB35-4D94-AE3D-C78B537B5E2F}
 		{179D0A0F-AAC3-4322-92DE-008F91554389} = {7A2BFC89-057F-4F8D-ADB7-C7D122B160EF}
 		{F1AA9A81-CBB6-4D8E-9FC4-45C7355AF8CA} = {7A2BFC89-057F-4F8D-ADB7-C7D122B160EF}
+		{44D98D52-236A-4534-B59F-255EF3C40F7C} = {B76348CD-F496-4B6E-A915-82A342AA5150}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3CA9CA2D-AF5E-405A-A148-0EE47863B770}
 	EndGlobalSection
 EndGlobal
