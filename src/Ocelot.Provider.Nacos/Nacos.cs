@@ -12,18 +12,20 @@ namespace Ocelot.Provider.Nacos
     {
         private readonly INacosNamingService _client;
         private readonly string _serviceName;
+        private readonly string _groupName;
 
-        public Nacos(string serviceName, INacosNamingService client)
+        public Nacos(string serviceName, INacosNamingService client,string groupName)
         {
             _client = client;
             _serviceName = serviceName;
+            _groupName = groupName;
         }
 
         public async Task<List<Service>> Get()
         {
             var services = new List<Service>();
 
-            var instances = await _client.GetAllInstances(_serviceName);
+            var instances = await _client.GetAllInstances(_serviceName, _groupName);
 
             if (instances != null && instances.Any())
             {
