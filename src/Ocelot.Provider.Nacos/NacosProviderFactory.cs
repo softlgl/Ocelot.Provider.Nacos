@@ -2,6 +2,8 @@
 using Ocelot.ServiceDiscovery;
 using Microsoft.Extensions.DependencyInjection;
 using Nacos.V2;
+using Ocelot.Provider.Nacos.NacosClient.V2;
+using Microsoft.Extensions.Options;
 
 namespace Ocelot.Provider.Nacos
 {
@@ -12,7 +14,8 @@ namespace Ocelot.Provider.Nacos
             var client = provider.GetService<INacosNamingService>();
             if (config.Type?.ToLower() == "nacos" && client != null)
             {
-                return new Nacos(route.ServiceName, client);
+                var option = provider.GetService<IOptions<NacosAspNetOptions>>();
+                return new Nacos(route.ServiceName, client, option);
             }
             return null;
         };
