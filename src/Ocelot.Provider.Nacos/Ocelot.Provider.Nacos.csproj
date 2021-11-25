@@ -8,7 +8,7 @@
     <PackageProjectUrl>https://github.com/softlgl/Ocelot.Provider.Nacos</PackageProjectUrl>
     <Title>Ocelot.Provider.Nacos</Title>
     <Description>Repo for Nacos integration with Ocelot</Description>
-    <Version>1.2.0</Version>
+    <Version>1.2.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
