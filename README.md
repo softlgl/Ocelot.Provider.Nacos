@@ -18,7 +18,7 @@ Ocelot集成Nacos注册中心组件
 + Nacos访问组件 [nacos-sdk-csharp](https://github.com/nacos-group/nacos-sdk-csharp)
 
 ```
- <PackageReference Include="nacos-sdk-csharp" Version="1.1.0-alpha20210426120755" />
+ <PackageReference Include="nacos-sdk-csharp" Version="1.1.0" />
 ```
 
 ### 添加引用
@@ -45,11 +45,11 @@ dotnet add package Ocelot.Provider.Nacos --version 1.1.0
 
 管理界面安装的话注意勾选 包括预览发行版，因为目前构建的是预览版
 ```
-<PackageReference Include="Ocelot.Provider.Nacos" Version="1.2.0-preview.1" />
+<PackageReference Include="Ocelot.Provider.Nacos" Version="1.2.2" />
 ```
 或
 ```
-dotnet add package Ocelot.Provider.Nacos --version 1.2.0-preview.1
+dotnet add package Ocelot.Provider.Nacos --version 1.2.2
 ```
 
 ### 使用方式
@@ -104,7 +104,7 @@ public void ConfigureServices(IServiceCollection services)
     "ServerAddresses": [ "http://192.168.219.1:8848" ],
     "ServiceName": "apigateway",
     "DefaultTimeOut": 15000,
-    //自定义Namespace的Id
+    //自定义Namespace的Id,默认的虽然可以注册发现，但是在nacos中不展示
     "Namespace": "2ae308e2-7e8a-4602-9d1c-56508a3e263c",
     "GroupName": "DEFAULT_GROUP",
     "ClusterName": "DEFAULT",

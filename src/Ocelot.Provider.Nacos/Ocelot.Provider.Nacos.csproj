@@ -8,14 +8,14 @@
     <PackageProjectUrl>https://github.com/softlgl/Ocelot.Provider.Nacos</PackageProjectUrl>
     <Title>Ocelot.Provider.Nacos</Title>
     <Description>Repo for Nacos integration with Ocelot</Description>
-    <Version>1.2.0</Version>
+    <Version>1.2.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="nacos-sdk-csharp" Version="1.1.0" />
+    <PackageReference Include="nacos-sdk-csharp" Version="1.2.2" />
     <PackageReference Include="Ocelot" Version="17.0.0" />   
-    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="5.0.0" />
-    <PackageReference Include="EasyCaching.InMemory" Version="1.3.0" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="6.0.0" />
+    <PackageReference Include="EasyCaching.InMemory" Version="1.4.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
   </ItemGroup>
 </Project>
