@@ -43,7 +43,7 @@ dotnet add package Ocelot.Provider.Nacos --version 1.1.0
 
 #### Nacos 2.0
 
-管理界面安装的话注意勾选 包括预览发行版，因为目前构建的是预览版
+注意版本1.x和2.x的没做版本兼容,2.x使用以下版本。当时考虑还得在配置文件里做版本区分，所以就独立不同的包了。
 ```
 <PackageReference Include="Ocelot.Provider.Nacos" Version="1.2.2" />
 ```
