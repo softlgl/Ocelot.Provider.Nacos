@@ -21,7 +21,9 @@ namespace Ocelot.Provider.Nacos.NacosClient.V2
         public static IServiceCollection AddNacosAspNet(this IServiceCollection services, IConfiguration configuration, string section = "nacos")
         {
             services.Configure<NacosAspNetOptions>(configuration.GetSection(section));
-            services.AddNacosV2Naming(configuration);
+
+            services.AddNacosV2Naming(configuration, sectionName: section);
+
             services.AddSingleton<RegSvcBgTask>();
 
             return services;
