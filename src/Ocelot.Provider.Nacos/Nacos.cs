@@ -34,6 +34,7 @@ namespace Ocelot.Provider.Nacos
 
             var instances = await _client.ListInstancesAsync(new ListInstancesRequest
             {
+                Clusters = _clusters,
                 ServiceName = _serviceName,
                 GroupName = _groupName,
                 NamespaceId = _namespaceId,
