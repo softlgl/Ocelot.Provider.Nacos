@@ -9,9 +9,9 @@ namespace Ocelot.Provider.Nacos
 {
     public static class OcelotBuilderExtensions
     {
-        public static IOcelotBuilder AddNacosDiscovery(this IOcelotBuilder builder)
+        public static IOcelotBuilder AddNacosDiscovery(this IOcelotBuilder builder, string section = "nacos")
         {
-            builder.Services.AddNacosAspNet(builder.Configuration);
+            builder.Services.AddNacosAspNet(builder.Configuration, section);
             builder.Services.AddSingleton<ServiceDiscoveryFinderDelegate>(NacosProviderFactory.Get);
             builder.Services.AddSingleton<OcelotMiddlewareConfigurationDelegate>(NacosMiddlewareConfigurationProvider.Get);
             return builder;
