@@ -13,12 +13,12 @@ Ocelot集成Nacos注册中心组件
   它其实是有一个asp.net core版本的组件，但是我没有选用，虽然那个用起来功能很强大，但是我需要自己改造一下，让它能更好的适配Ocelot
   
 #### Nacos 2.0
-+ .Net5
++ .Net7
 + Ocelot版本 v17.0.0
 + Nacos访问组件 [nacos-sdk-csharp](https://github.com/nacos-group/nacos-sdk-csharp)
 
 ```
- <PackageReference Include="nacos-sdk-csharp" Version="1.1.0" />
+ <PackageReference Include="nacos-sdk-csharp" Version="1.3.4" />
 ```
 
 ### 添加引用
@@ -45,11 +45,11 @@ dotnet add package Ocelot.Provider.Nacos --version 1.1.0
 
 注意版本1.x和2.x的没做版本兼容,2.x使用以下版本。当时考虑还得在配置文件里做版本区分，所以就独立不同的包了。
 ```
-<PackageReference Include="Ocelot.Provider.Nacos" Version="1.2.2" />
+<PackageReference Include="Ocelot.Provider.Nacos" Version="1.3.4" />
 ```
 或
 ```
-dotnet add package Ocelot.Provider.Nacos --version 1.2.2
+dotnet add package Ocelot.Provider.Nacos --version 1.3.4
 ```
 
 ### 使用方式
