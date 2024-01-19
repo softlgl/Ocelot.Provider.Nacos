@@ -27,7 +27,7 @@ namespace Ocelot.Provider.Nacos
             _clusters = (string.IsNullOrWhiteSpace(options.Value.ClusterName) ? NacosConstants.DEFAULT_CLUSTER_NAME : options.Value.ClusterName).Split(",").ToList();
         }
 
-        public async Task<List<Service>> Get()
+        public async Task<List<Service>> GetAsync()
         {
             var services = new List<Service>();
 
@@ -38,7 +38,7 @@ namespace Ocelot.Provider.Nacos
                 services.AddRange(instances.Select(i => new Service(i.InstanceId, new ServiceHostAndPort(i.Ip, i.Port), "", "", new List<string>())));
             }
 
-            return await Task.FromResult(services);
+            return services;
         }
     }
 }
