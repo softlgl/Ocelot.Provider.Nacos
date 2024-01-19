@@ -6,12 +6,15 @@ using Ocelot.Middleware;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Ocelot.Provider.Nacos.NacosClient.V2;
+using Microsoft.AspNetCore.Builder;
 
 namespace Ocelot.Provider.Nacos
 {
     public class NacosMiddlewareConfigurationProvider
     {
-        public static OcelotMiddlewareConfigurationDelegate Get = builder =>
+        public static OcelotMiddlewareConfigurationDelegate Get { get; } = GetAsync;
+
+        private static async Task GetAsync(IApplicationBuilder builder)
         {
             var internalConfigRepo = builder.ApplicationServices.GetService<IInternalConfigurationRepository>();
             var config = internalConfigRepo.Get();
@@ -20,11 +23,9 @@ namespace Ocelot.Provider.Nacos
 
             if (UsingNacosServiceDiscoveryProvider(config.Data))
             {
-                builder.UseNacosAspNet(hostLifetime).GetAwaiter().GetResult();
+                await builder.UseNacosAspNet(hostLifetime);
             }
-
-            return Task.CompletedTask;
-        };
+        }
 
         private static bool UsingNacosServiceDiscoveryProvider(IInternalConfiguration configuration)
         {

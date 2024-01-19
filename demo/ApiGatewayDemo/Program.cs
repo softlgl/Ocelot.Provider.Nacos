@@ -1,28 +1,16 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using Ocelot.DependencyInjection;
+using Ocelot.Middleware;
+using Ocelot.Provider.Nacos;
 
-namespace ApiGatewayDemo
-{
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            CreateHostBuilder(args).Build().Run();
-        }
+var builder = WebApplication.CreateBuilder(args);
+builder.Configuration.AddJsonFile("ocelotconfig.json", true, true);
+builder.Services.AddOcelot().AddNacosDiscovery();
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .ConfigureWebHostDefaults(webBuilder =>
-                {
-                    webBuilder.UseStartup<Startup>();
-                }).ConfigureAppConfiguration(builder=> {
-                    builder.AddJsonFile("ocelotconfig.json", true, true);
-                });
-    }
-}
+var app = builder.Build();
+
+app.MapGet("/", () => "Hello World!");
+app.UseOcelot().Wait();
+
+app.Run();

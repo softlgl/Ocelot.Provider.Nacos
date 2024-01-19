@@ -12,8 +12,8 @@ namespace Ocelot.Provider.Nacos
         public static IOcelotBuilder AddNacosDiscovery(this IOcelotBuilder builder, string section = "nacos")
         {
             builder.Services.AddNacosAspNet(builder.Configuration, section);
-            builder.Services.AddSingleton<ServiceDiscoveryFinderDelegate>(NacosProviderFactory.Get);
-            builder.Services.AddSingleton<OcelotMiddlewareConfigurationDelegate>(NacosMiddlewareConfigurationProvider.Get);
+            builder.Services.AddSingleton(NacosProviderFactory.Get);
+            builder.Services.AddSingleton(NacosMiddlewareConfigurationProvider.Get);
             return builder;
         }
     }
